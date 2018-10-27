@@ -1,0 +1,26 @@
+body {
+  background-image: url("../assets/snowmtn.jpg");
+  background-size:  cover;
+  background-repeat:  no-repeat;
+}
+
+@media screen and (max-width: 640px){
+ body {
+  /* option 1: remove background altogether */
+  background: #fff;}
+}
+
+.subHead {
+  color: #222;
+}
+ .navLeft:hover {
+   color: white;
+ }
+
+ .content-section {
+   background: #ffffff;
+   padding: 10px 20px;
+   border: 1px solid #dddddd;
+   border-radius: 3px;
+   margin-bottom: 20px;
+ }

@@ -1,0 +1,32 @@
+{% extends 'mainsite/base.html' %}
+{% block content %}
+  <div class="row mt-5">
+    <div class="col text-center">
+      <a href="{% url 'users-createtask' %}" class="btn btn-outline-primary" role="button">+ Create Task</a>
+    </div>
+  </div>
+  {% for task in tasks %}
+    <div class="row justify-content-center mt-4">
+      <div class=" col-8 content-section" style="opacity: 0.9;">
+        <h4 class="border-bottom">{{ task.title }}</h4>
+        <br>
+          <p>{{ task.task }}</p>
+        <br>
+        <small class="border-top">
+          {{ task.date_posted }}
+        </small>
+        <form action="{% url 'users-deletetask' %}" method="POST">
+          {% csrf_token %}
+          <div class="form-group">
+            <input type="text" name="delete" value="{{ task.id }}"
+              style="display: none;">
+            <button class="btn btn-outline-danger"
+              type="submit">Delete Task
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  {% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'mainsite/base.html' %}
+{% block content %}
+  <div class="content-section">
+    {% csrf_token %}
+    <h4 class="border-bottom mb-4 pb-2">Logged Out</h4>
+    <button class="btn btn-outline-primary" type="button">
+      <a style="text-decoration: none; color: inherit;" href="{% url 'login' %}">Sign In</a>
+    </button>
+    <div class="pt-3">
+      <small class="text-muted">
+        You have logged out.
+      </small>
+    </div>
+  </div>
+{% endblock content %}

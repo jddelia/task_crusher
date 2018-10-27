@@ -1,0 +1,18 @@
+{% extends 'mainsite/base.html' %}
+{% block content %}
+  <div class="content-section" style="opacity: 0.9;">
+    <form class="" action="" method="POST">
+      {% csrf_token %}
+      <fieldset class="form-group">
+        <input type="text" name="title" placeholder="Title">
+        <br>
+        <br>
+        <legend class="border-bottom mb-4">Create Task</legend>
+        <textarea placeholder="Enter task here..." cols="50" rows="8" name="task"></textarea>
+      </fieldset>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Create</button>
+      </div>
+    </form>
+  </div>
+{% endblock content %}
