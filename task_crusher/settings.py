@@ -128,8 +128,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIR = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
