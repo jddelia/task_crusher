@@ -82,8 +82,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'task_crusher',
-        'USER': 'jddelia',
-        'PASSWORD': 'frostfire1',
+        'USER': 'user',
+        'PASSWORD': 'userpassword',
         'HOST': 'localhost',
         'PORT': '',
     }
